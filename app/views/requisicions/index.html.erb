@@ -1,0 +1,29 @@
+<h1>Listing requisicions</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+    <th>Fecha</th>
+    <th>Orden de compra</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @requisicions.each do |requisicion| %>
+  <tr>
+    <td><%= requisicion.descripcion %></td>
+    <td><%= requisicion.fecha %></td>
+    <td><%= requisicion.orden_de_compra_id %></td>
+    <td><%= requisicion.user_id %></td>
+    <td><%= link_to 'Show', requisicion %></td>
+    <td><%= link_to 'Edit', edit_requisicion_path(requisicion) %></td>
+    <td><%= link_to 'Destroy', requisicion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Requisicion', new_requisicion_path %>

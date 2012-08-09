@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @item.nombre %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @item.marca %>
+</p>
+
+<p>
+  <b>Medida:</b>
+  <%= @item.medida %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @item.estado %>
+</p>
+
+<p>
+  <b>Unidad:</b>
+  <%= @item.unidad_id %>
+</p>
+
+<p>
+  <b>Proveedor:</b>
+  <%= @item.proveedor_id %>
+</p>
+
+<p>
+  <b>Seccion:</b>
+  <%= @item.seccion_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,29 @@
+<h1>Listing item_requisicions</h1>
+
+<table>
+  <tr>
+    <th>Cantidad</th>
+    <th>Prioridad</th>
+    <th>Item</th>
+    <th>Requisicion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @item_requisicions.each do |item_requisicion| %>
+  <tr>
+    <td><%= item_requisicion.cantidad %></td>
+    <td><%= item_requisicion.prioridad %></td>
+    <td><%= item_requisicion.item_id %></td>
+    <td><%= item_requisicion.requisicion_id %></td>
+    <td><%= link_to 'Show', item_requisicion %></td>
+    <td><%= link_to 'Edit', edit_item_requisicion_path(item_requisicion) %></td>
+    <td><%= link_to 'Destroy', item_requisicion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item requisicion', new_item_requisicion_path %>

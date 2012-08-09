@@ -1,0 +1,39 @@
+<%= form_for(@requisicion) do |f| %>
+  <% if @requisicion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@requisicion.errors.count, "error") %> prohibited this requisicion from being saved:</h2>
+
+      <ul>
+      <% @requisicion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :orden_de_compra_id %><br />
+    <%= f.text_field :orden_de_compra_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+
+ 
+  <%= f.fields_for :items do |builder|%>
+  	<%= render "items_fields", :f =>builder%>
+
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cantidad: 1
+  prioridad: MyString
+  item_id: 1
+  requisicion_id: 1
+
+two:
+  cantidad: 1
+  prioridad: MyString
+  item_id: 1
+  requisicion_id: 1
